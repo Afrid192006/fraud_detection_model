@@ -1,0 +1,4 @@
+.venv/
+Data/AIML Dataset.csv
+__pycache__/
+*.pyc
