@@ -2,7 +2,12 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-model = joblib.load("model\fraud_detection_pipeline.pkl")
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_PATH = BASE_DIR / "model" / "fraud_detection_pipeline.pkl"
+
+model = joblib.load(MODEL_PATH)
 
 st.title("Fraud Detection Prediction App")
 
